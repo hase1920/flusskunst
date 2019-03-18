@@ -1,15 +1,18 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {Mitmacher,Mit} from '../components/format'
-import {Link} from 'gatsby'
-const Mitmachen =  (props) =>(
-<Layout location= {props.location.pathname}>
-<Link to="/">Rhein-Kultur</Link>
-<h1>Mitmachen</h1>
+import {Link,graphql} from 'gatsby'
+
+const Mitmachen =  (props) =>{
+    const title = props.data.site.siteMetadata.title
+    return (
+<Layout location={props.location.pathname}>
+<h1 style={{fontSize:'2.rem'}}><Link to="/"> &larr; {title}</Link></h1>
+<h2>Mitmachen</h2>
 
 <Mit> 
 
-{console.log(props.data)}
+
  
  <Mitmacher>
  
@@ -38,9 +41,17 @@ Alle von Ihnen genannten persönlichen daten werden selbstverständlich streng
 </p>
 <a href="/raumangebot.pdf">Raumangebotsformular: pdf-download</a>
 </Mitmacher>
-
 </Mit>
 </Layout>
-)
+)}
 export default Mitmachen
 
+export const mitQuery = graphql`
+  query  {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }`
