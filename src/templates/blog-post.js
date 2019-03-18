@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import {Blogdiv} from '../components/format'
+import {Blogdiv2} from '../components/format'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -13,7 +13,8 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-         <Blogdiv>
+         <div>
+         <Blogdiv2>
         <SEO
           title={post.frontmatter.artist}
           description={post.frontmatter.description || post.excerpt}
@@ -21,7 +22,7 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.artist}<br/>
         <span style={{fontSize:'.9rem',textTransform:'uppercase'}}>{post.frontmatter.kategorie}</span>
         </h1>
-        <img width="500px" height="auto" src={`/${post.frontmatter.bild}`} alt=""/>
+        <img src={`/${post.frontmatter.bild}`} alt=""/>
         <p
           style={{
             ...scale(-1 / 5),
@@ -32,12 +33,9 @@ class BlogPostTemplate extends React.Component {
         >
        
         </p>
-        <div style={{width:'60%'}} dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        
+        
         
 
         <ul
@@ -49,22 +47,25 @@ class BlogPostTemplate extends React.Component {
             padding: 0,
           }}
         >
-          <li>
+          <li style={{
+            margin:'0 35px'
+          }}>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev">
+              <Link style={{color:'#00BFFF'}} to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.artist}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
+              <Link  style={{color:'#00BFFF'}} to={next.fields.slug} rel="next">
                 {next.frontmatter.artist} →
               </Link>
             )}
           </li>
         </ul>
-        </Blogdiv>
+        </Blogdiv2>
+        </div>
       </Layout>
     )
   }

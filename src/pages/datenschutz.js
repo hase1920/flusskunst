@@ -1,20 +1,23 @@
 import React from 'react'
 import { rhythm} from "../utils/typography"
-import {Link} from 'gatsby'
+import {Link,graphql} from 'gatsby'
 
-const Datenschutz = () => (
+
+const Datenschutz = (props) => {
+  const title=props.data.site.siteMetadata.title
+ return (
     <div
     style={{
       marginLeft: `auto`,
       marginRight: `auto`,
       maxWidth: rhythm(24),
       padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      background:`rgba(122,122,122,0.08)`
+    
     }}
   > 
-<Link to="/"> &larr; Home</Link> 
-
-<h1>Hinweis zum Datenschutz</h1>
+ 
+<h1 style={{fontSize:'2rem'}}><Link to="/"> &larr; {title} </Link></h1> 
+<h2>Hinweis zum Datenschutz</h2>
 <p>Die unten stehenden Angaben sind nur vorbereitender Natur. Das heißt:
   Im Moment sind noch keine Tools installiert, die Tracking- und andere Informationen
   der Webseitenbesucher erfassen und verfolgen.
@@ -133,5 +136,15 @@ Hierzu können z.B. Inhalte wie Bilder, Videos oder Texte und Schaltflächen geh
   angemeldeten Banner und Links führen.</p>
 
  </div>
-)
+)}
 export default Datenschutz
+
+export const schutzQuery = graphql`
+  query  {
+    site {
+      siteMetadata {
+        title
+        author
+      }
+    }
+  }`

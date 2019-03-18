@@ -29,13 +29,14 @@ class BlogIndex extends React.Component {
       
        <StartDiv>
        <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-        <FaArrowDown /> 
+       <Link to="/blog"><FaArrowDown /></Link> 
         <span style={{fontFamily:'Roboto Slab',color:'#00BFFF',fontSize:'1.2rem'}}>Künstler</span> 
          <Link to="/blog">  <img src="/kuenstler.svg" alt="Künstler" /></Link>
          </div>
          <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
         
-         <FaArrowDown /> 
+         <Link to ="/raeume">  <FaArrowDown />   </Link>
+      
          <span style={{fontFamily:'Roboto Slab',color:'#00BFFF',fontSize:'1.2rem'}}>Räume</span> <Link to ="/raeume">  <img src="/raeume.svg" alt="Raeume" />  </Link>
        
          </div>

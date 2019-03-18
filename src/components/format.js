@@ -1,5 +1,44 @@
 import styled, {keyframes} from 'styled-components'
  
+export const Mitmacher = styled.div`
+display:flex;
+flex-direction:column;
+width:36%;
+p{
+    padding:10px;
+}
+@media (max-width:300px){
+    width:599px;
+}
+
+`
+export const Mit = styled.div`{
+    display:flex;
+    
+    @media (max-width:600px) {
+        flex-direction:column;
+        > * {
+            width:100%;
+        }
+    }
+}`
+
+
+export const Header2 = styled.h2`
+ 
+ width:50%;
+ fontWeight:100;
+ paddingTop:10;
+ margin:0;
+ fontFamily:Roboto Slab;
+ marginTop:-10px;
+ lineHeight:1.5;
+ color:black;
+ @media (max-width:700px){
+   width:80%;
+ }
+ 
+ `
  export const Dekla=styled.div`
    p {
        width:60%;
@@ -77,53 +116,112 @@ justify-content:center;
 
 `
 export const MeinBild = styled.div`
-position:relative;
-  
-height:300px;
-width:300px;
-@media (max-width:600px){
-    width:70%;
-    height:100%;
+display:flex;
+flex-direction:column;
+min-width:320px;
 
+    justify-content:center;
+    align-items:center;
+
+
+
+img {
+    width:300px;
+    height:300px;
+    margin:4px;
+}
+ 
+figure {
+    text-align: center;
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+  
+
+  
+    
+  }
+  figcaption {
+      position: relative;
+      color:black;
+      margin:0 0 0 0;
+     
+      padding:6px;
+  }
+@media (max-width:700px){
+  
+   figure a img {
+      width:320px;
+   }
+   
     
     h3 {
         font-size:1.4rem
     }
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    
 }
+
+  
 `
 export const Footer = styled.div`
   display:flex;
-  
-  a {
-      padding:20px;
-      text-transform:uppercase;
-      font-weight:400;
-      font-size:.9rem;
-      letter-spacing:.06rem;
-  }
   align-items:flex-start;
-  
+  margin-top:80px;
   img {
       
       padding:20px;
-      width:240px;
-      height:auto;
+      width:290px;
+     
   }
-  @media (max-width:700px) {
-      flex-direction:column;
-  }
+
+  @media (max-width:699px){
+    flex-direction:column; 
+    justify-content:center;
+    alignItems:center; 
+    img {
+        display:block;
+        text-align:center;
+    }
+
+    ul  {
+        width:100%;
+        padding:0;
+        margin:0;
+      
+    }
+
+   ul li {
+       display:block;
+       padding:10px;
+       text-align:center;
+       text-transform:uppercase;
+       letter-spacing:0.06rem;
+      
+   }
+}
+@media (min-width:700px) {
+    ul {
+        display:flex;
+        align-items:space-around;
+
+    }
+    ul li {
+        display:inline-block;
+        padding:10px;
+    }
+    > img {
+        display:none;
+    }
+}
+   
   `
   export const Footer2 = styled.div`
-  display:flex;
+ 
   
   a {
       padding:20px;
   }
-  align-items:baseline;
+ 
   
   img {
       
@@ -131,9 +229,11 @@ export const Footer = styled.div`
       width:240px;
       height:auto;
   }
-  @media (max-width:700px) {
+  @media (max-width:699px) {
       flex-direction:column;
+      display:flex;
   }
+  
   `
 
 export const Menudiv = styled.div`
@@ -168,17 +268,17 @@ export const Menudiv = styled.div`
   `
 export const Blogdiv = styled.div`
   display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  margin-top:60px;
   flex-wrap:wrap;
-  padding:10px 0;
-  
+  height:100%;
+  width:100%;
   h1 {
       font-size:1.4rem;
   }
-  @media(max-width:700px) {
-    width:100%;
-    img {
-        width:100%;
-    }
+  @media(max-width:690px) {
+    margin-top:20px;
     h1 {
         font-size:1.2rem;
     }
@@ -187,21 +287,34 @@ export const Blogdiv = styled.div`
         font-size:1.4rem;
     }
     margin-bottom:30px;
-    
+   
 }
+
 `
 export const Blogdiv2 = styled.div`
   display:flex;
+  margin-top:60px;
   flex-direction:column;
+  justify-content:flex-start;
+  align-items:flex-start;
   padding:1%;
   h1 {
       font-size:1.4rem;
   }
-  @media(max-width:600px) {
-    width:100%;
+  img {
+    width:320px;
+} 
+ 
+   
     h1 {
         font-size:1.2rem;
     }
+    @media (min-width: 700px){
+        p {
+            width:70%;
+        }
+    }
+    
 } 
 `
 

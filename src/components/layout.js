@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import {Footer,Logo,Mach,Boxi} from './format'
+import {Footer,Header2,Logo,Mach,Boxi} from './format'
 import { rhythm } from "../utils/typography"
 
 class Layout extends React.Component {
@@ -17,10 +17,9 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
-        <h2 style={{display:'block',width:'50%',fontWeight:100,paddingTop:10,margin:0,fontFamily:'Roboto Slab',marginTop:'-10px',lineHeight:'1.5',color:'black'}}>
-          Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre &rarr; Räume
+        <Header2>  Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre &rarr; Räume
           
-          im UNESCO Welterbe Oberes Mittelrheintal </h2>
+          im UNESCO Welterbe Oberes Mittelrheintal </Header2>
         
         </div>
       )
@@ -32,10 +31,10 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
-        <h2 style={{display:'block',width:'50%',fontWeight:100,paddingTop:10,fontFamily:'Roboto Slab',marginTop:'-10px',lineHeight:'1.5',margin:0,color:'black'}}>
-          Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre &rarr; Räume
+        
+        <Header2>  Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre &rarr; Räume
           
-          im UNESCO Welterbe Oberes Mittelrheintal </h2>
+          im UNESCO Welterbe Oberes Mittelrheintal </Header2>
         </div>
       )
     }
@@ -61,15 +60,22 @@ class Layout extends React.Component {
         <main>{children}</main>
        
         <Footer>
+         <ul>
+           <li><Link to="/">Home</Link></li>
+           <li><Link to="/kontakt">Kontakt</Link></li>
+           <li> <Link to="/impressum">Impressum</Link></li>
+           <li><Link to="/datenschutz">Datenschutz</Link></li>
+          </ul> 
+      <img src="/z.svg" alt="Logo Zweckverband" />
           
-        <Link to="/">Home</Link><Link to="/kontakt">Kontakt</Link><Link to="/impressum">Impressum</Link><Link to="/datenschutz">Datenschutz</Link>
-
-          </Footer>
-                  
-          <Logo>
-        <img src="z.svg" alt="Logo Zweckverband" />
-              </Logo>
          
+          </Footer>
+                 
+          <Logo>
+          <a target="_blank" rel="noopener noreferrer" href="http://www.zv-welterbe.de/"> <img src="/z.svg" alt="Logo Zweckverband" /></a>
+            
+          </Logo>
+           
              
      
        </div>

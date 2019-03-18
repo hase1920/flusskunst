@@ -50,7 +50,7 @@ zeig = (e) => {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <div style={{width:'600px'}}>
+        <div>
   <select onChange={this.zeig}>
     <option value="0">Wähle Kategorie:</option>
     <option value="alle">Alle Künstler</option>
@@ -59,6 +59,8 @@ zeig = (e) => {
     <option value="Instrumentalmusik">Instrumentalmusik</option>
     <option value="Malerei">Malerei</option>
     <option value="Literatur">Literatur</option>
+    <option value="Photografie">Photografie</option>
+    <option value="Design">Design</option>
     </select>
     </div>
         <Blogdiv>
@@ -72,7 +74,7 @@ zeig = (e) => {
               <figure>
               <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                  
-                <img className="scaled" src={node.frontmatter.bild}
+                <img src={node.frontmatter.bild}
                  alt="" /> 
               </Link>
           <figcaption>{node.frontmatter.artist}</figcaption>
