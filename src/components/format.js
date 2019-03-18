@@ -10,11 +10,17 @@ p{
 @media (max-width:300px){
     width:599px;
 }
-
+a {color:#00BFFF;}
 `
 export const Mit = styled.div`{
     display:flex;
-    
+    h1 a{
+        font-weight:400;
+    }
+    h2 {
+        font-size:1.8rem;
+        font-weight:400;
+    }
     @media (max-width:600px) {
         flex-direction:column;
         > * {
@@ -25,14 +31,13 @@ export const Mit = styled.div`{
 
 
 export const Header2 = styled.h2`
- 
  width:50%;
  fontWeight:100;
  paddingTop:10;
  margin:0;
  fontFamily:Roboto Slab;
  marginTop:-10px;
- lineHeight:1.5;
+ lineHeight:1 !important;
  color:black;
  @media (max-width:700px){
    width:80%;
@@ -45,7 +50,7 @@ export const Header2 = styled.h2`
    }
    @media (max-width:700px){
     p {
-        width:90%;
+        width:100%;
     }
 }
  `        
@@ -118,40 +123,33 @@ justify-content:center;
 export const MeinBild = styled.div`
 display:flex;
 flex-direction:column;
-min-width:320px;
-
-    justify-content:center;
-    align-items:center;
-
-
-
-img {
-    width:300px;
-    height:300px;
-    margin:4px;
-}
- 
+justify-content:center;
+ align-items:center;
+ img {
+    object-fit:contain;
+    width:300px
+ }
 figure {
     text-align: center;
     font-style: italic;
     font-size: smaller;
     text-indent: 0;
-  
-
-  
-    
+    margin:2px;
+   
   }
   figcaption {
       position: relative;
-      color:black;
-      margin:0 0 0 0;
+      color:white;
      
-      padding:6px;
+      display:block;
+      color:black;
+      margin-top:-20px
   }
 @media (max-width:700px){
   
-   figure a img {
-      width:320px;
+   img {
+       width:100%;
+       height:auto;
    }
    
     
@@ -297,21 +295,27 @@ export const Blogdiv2 = styled.div`
   flex-direction:column;
   justify-content:flex-start;
   align-items:flex-start;
-  padding:1%;
+  padding:1% 0;
   h1 {
       font-size:1.4rem;
   }
-  img {
-    width:320px;
-} 
+  
  
    
     h1 {
         font-size:1.2rem;
     }
+    @media (max-width: 699px){
+        p {
+            width:90%;
+        }
+      img {
+          width:100%;
+      }
+    }   
     @media (min-width: 700px){
         p {
-            width:70%;
+            width:48%;
         }
     }
     

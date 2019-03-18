@@ -3,7 +3,7 @@ artist: Künstler unbekannt
 date: "2015-05-01T22:12:03.284Z"
 kategorie: Instrumentalmusik
 description: Großartiger Pianist
-bild: kuenstler-8.svg
+bild: kuenstler-8.jpg
 ---
 
 How exciting!

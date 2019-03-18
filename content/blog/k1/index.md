@@ -1,9 +1,9 @@
 ---
 artist: Künstler unbekannt
 date: "2015-05-01T22:12:03.284Z"
-kategorie: Photografie
+kategorie: Bildene Kunst
 description: Wunderbare Arbeiten vom Rhein
-bild: rene.jpg
+bild: kuenstler-1.jpg
 ---
 
 How exciting!

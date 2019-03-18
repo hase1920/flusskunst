@@ -1,8 +1,8 @@
 ---
-artist: Detlev Kleinen
-kategorie: bildene Kunst
+artist: Unbekannt
+kategorie: Malerei
 description: Arbeiten mit Kieselsteinen
-bild: kuenstler-3.svg
+bild: kuenstler-3.png   
 ---
 
 Detlev Kleinen, bekannt durch zahlreiche Ausstellungen, durch Auftritte in den Medien, arbeitet mit Kieselsteinen, die er bei intensiven Erkundigungen an den

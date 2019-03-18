@@ -17,7 +17,7 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
-        <Header2>  Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre &rarr; Räume
+        <Header2>  Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre <span style={{color:'#00BFFF'}}> &rarr; </span> Räume
           
           im UNESCO Welterbe Oberes Mittelrheintal </Header2>
         
@@ -32,8 +32,8 @@ class Layout extends React.Component {
           </Link>
         </h1>
         
-        <Header2>  Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre &rarr; Räume
-          
+        <Header2>  
+          Netzwerk für <span style={{color:'#00BFFF'}}>&rarr;</span> Künstler &amp; temporäre <span style={{color:'#00BFFF'}}> &rarr; </span> Räume
           im UNESCO Welterbe Oberes Mittelrheintal </Header2>
         </div>
       )

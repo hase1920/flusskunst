@@ -3,7 +3,7 @@ artist: Künstler unbekannt
 date: "2015-05-01T22:12:03.284Z"
 kategorie: bildene Kunst
 description: Wunderbare Arbeiten vom Rhein
-bild: kuenstler-6.svg
+bild: kuenstler-6.jpg
 ---
 
 Christine How exciting!
