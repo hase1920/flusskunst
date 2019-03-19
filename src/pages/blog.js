@@ -120,6 +120,10 @@ export const pageQuery = graphql`
             description
             kategorie
             bild
+            webseite
+            ort
+            strasse
+            email
           }
         }
       }

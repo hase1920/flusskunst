@@ -19,9 +19,20 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.artist}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.artist}<br/>
+        <Link to="/blog"> &larr; Alle Künster &amp; Künstlerinnen </Link>
+        <h1>{post.frontmatter.artist}</h1>
         <span style={{fontSize:'.9rem',textTransform:'uppercase'}}>{post.frontmatter.kategorie}</span>
-        </h1>
+       {post.frontmatter.ort
+         && <span>{post.frontmatter.ort}</span>
+      }
+        {post.frontmatter.email
+          && <span>{post.frontmatter.email}</span>
+        }
+       {post.frontmatter.webseite && 
+        <span><a rel="noopener noreferrer" target="_blank" href={post.frontmatter.webseite}>{post.frontmatter.webseite} </a></span>
+      }
+        
+        
         <img src={`/${post.frontmatter.bild}`} alt=""/>
         <p
           style={{
@@ -91,6 +102,10 @@ export const pageQuery = graphql`
         description
         kategorie
         bild
+        ort
+        strasse
+        email
+        webseite
       }
     }
   }

@@ -287,6 +287,9 @@ export const Blogdiv = styled.div`
     margin-bottom:30px;
    
 }
+@media only screen and (orientation:landscape) {
+    margin-top:120px;
+}  
 
 `
 export const Blogdiv2 = styled.div`
@@ -315,11 +318,16 @@ export const Blogdiv2 = styled.div`
     }   
     @media (min-width: 700px){
         p {
-            width:48%;
+            width:100%;
         }
     }
     
+    
 } 
+@media only screen and (orientation:landscape) {
+    margin-top:120px;
+}     
+
 `
 
 

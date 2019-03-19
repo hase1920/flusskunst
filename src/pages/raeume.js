@@ -8,6 +8,8 @@ class Raum extends React.Component {
 
             
             <h1> Hier stehen Raumnachfragen oder -Angebote</h1>
+            <a href="/Rhein-Kultur_Layout_Raeume.pdf"> -
+            &rarr; So wird die Raumseiten aussehen &rarr; PDF öffnen</a>
             </div>
             </Layout>
 

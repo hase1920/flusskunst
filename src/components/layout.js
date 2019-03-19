@@ -65,7 +65,9 @@ class Layout extends React.Component {
            <li><Link to="/kontakt">Kontakt</Link></li>
            <li> <Link to="/impressum">Impressum</Link></li>
            <li><Link to="/datenschutz">Datenschutz</Link></li>
+           <li><Link to="/hilfe">Anleitung für die Selbstdarstellung</Link></li>
           </ul> 
+      
       <img src="/z.svg" alt="Logo Zweckverband" />
           
          
