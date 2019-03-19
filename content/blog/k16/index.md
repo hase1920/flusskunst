@@ -1,7 +1,7 @@
 ---
 artist: Künstler unbekannt
 date: "2015-05-01T22:12:03.284Z"
-kategorie: Musik
+kategorie: Gesang
 description: Gesangstruppe
 bild: kuenstler-16.jpg
 ort: Lorch
