@@ -50,7 +50,7 @@ class Layout extends React.Component {
       }}>
       <Mach>
       <Boxi>
-              <Link to="/mitmachen">Mitmachen</Link>
+         <span style={{color:'#FFF'}}> &rarr; </span> <Link to="/mitmachen">Mitmachen</Link>
       </Boxi>
             
          </Mach>
