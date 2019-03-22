@@ -16,7 +16,7 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          keywords={[`Künstlerportal Oberes Mittelrheintal`, `Kunst am Rhein`, `Kulturwelterbe`, `Unesco`,`Bacharach`,`Oberwesel`,`Bingen`,`Lorch`,`Bakaloni`]}
         />
       <div>
     <Dekla>
