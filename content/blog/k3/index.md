@@ -6,7 +6,7 @@ bild: kuenstler-3.png
 ort: 55422 Bacharach
 strasse: Hauptstr. 1
 webseite: http://www.detlefkleinen.de
-email: atelier[ at ]etlefkleinen.de  
+email: atelier[ at ]detlefkleinen.de  
 ---
 
 ## "Die Poesie der Natur“
