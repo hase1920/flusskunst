@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: `Rhein-Kultur`,
-    author: `Kyle Mathews`,
+    author: `Zweckverband Oberes Mittelrheintal`,
     description: `Ein Portfolio für Künstler am Mittelrhein`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://rhein-kultur.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: ``,
     },
   },
   plugins: [
