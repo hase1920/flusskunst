@@ -298,12 +298,13 @@ export const Blogdiv2 = styled.div`
   flex-direction:column;
   justify-content:flex-start;
   align-items:flex-start;
-  padding:1% 0;
+  padding:30px 0;
   h1 {
       font-size:1.4rem;
   }
   
- 
+ img {
+    margin-top:10px;
    
     h1 {
         font-size:1.2rem;
