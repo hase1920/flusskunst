@@ -19,7 +19,7 @@ const Mitmachen =  (props) =>{
  <li style={{borderTop:'1px grey solid',borderBottom:'1px grey solid',display:'block',fontSize:'1.3rem',fontWeight:'400'}}>&rarr; Künstler</li>
 
 <p>
-Herzlich willkommen bei rhein-Kultur, dem Netzwerk für Künstler aus der Region oberes Mittelrheintal! sie wollen bei uns mitmachen?
+Herzlich willkommen bei Rhein-Kultur, dem Netzwerk für Künstler aus der Region Oberes Mittelrheintal! sie wollen bei uns mitmachen?
 Dazu schicken sie einfach eine Email mit Betreff: Mitmachen an obige Adresse
 Bitte nennen Sie darin:
 Ihren Namen, Ihre Kontaktdaten, die Kunstform, die sie ausüben, und fügen ein aussagekräftiges Bild (größe max. 2 mB) hinzu. Wir verarbeiten schnellstmöglich Ihren Teilnahmeantrag.
@@ -33,7 +33,7 @@ Alle von Ihnen genannten persönlichen Daten werden selbstverständlich streng
 <li style={{borderBottom:'1px grey solid',borderTop:'1px grey solid',display:'block',fontWeight:'400',fontSize:'1.3rem'}}>&rarr; Raumanbieter</li>
 
     <p>
-    Herzlich willkommen bei rhein-Kultur, dem Netzwerk für Anbieter von temporären Räumen in der Region Oberes Mittel-Rheintal! Sie wollen bei uns mitmachen? Dazu schicken sie einfach eine email mit Betreff: Mitmachen an obige Adresse.
+    Herzlich willkommen bei Rhein-Kultur, dem Netzwerk für Anbieter von temporären Räumen in der Region Oberes Mittel-Rheintal! Sie wollen bei uns mitmachen? Dazu schicken sie einfach eine Email mit Betreff: Mitmachen an obige Adresse.
 Bitte nennen Sie darin:
 Ihren Namen, Ihre Kontaktdaten, die Räumlichkeit, die sie anbieten möchten, und fügen ein aussagekräftiges Bild (größe max. 2 mB) hinzu. Wir melden uns schnellstmöglich bei Ihnen, um notwendige Details zu besprechen und einen Besichtigungstermin zu vereinbaren.
 Alle von Ihnen genannten persönlichen Daten werden selbstverständlich streng vertraulich behandelt und nicht an Dritte weitergegeben.
