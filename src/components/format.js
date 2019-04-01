@@ -1,5 +1,15 @@
 import styled, {keyframes} from 'styled-components'
- 
+
+const faden = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+
 export const Mitmacher = styled.div`
 display:flex;
 flex-direction:column;
@@ -60,6 +70,7 @@ export const StartDiv = styled.div`
   justify-content:flex-start;
   align-items:flex-start;
   align-content:baseline;
+animation: ${faden} .3s linear;
   @media (max-width:700px) {
     flex-direction:column;
     justify-content:center;
@@ -272,6 +283,7 @@ export const Blogdiv = styled.div`
   flex-wrap:wrap;
   height:100%;
   width:100%;
+  animation: ${faden} 1s linear;
   h1 {
       font-size:1.4rem;
   }
@@ -296,6 +308,7 @@ export const Blogdiv2 = styled.div`
   display:flex;
   margin-top:60px;
   flex-direction:column;
+  animation: ${faden} .3s linear; 
   justify-content:flex-start;
   align-items:flex-start;
   padding:30px 0;
