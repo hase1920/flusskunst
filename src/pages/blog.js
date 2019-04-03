@@ -10,45 +10,24 @@ class BlogIndex extends React.Component {
   state = {
    posts:[],
    aposts:[],
+   kategorie:"0", 
    lang:0
   }
-componentWillMount(){
-  const { data } = this.props
-  const siteTitle = this.props.data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
-  if(posts)
-    this.setState({ posts:posts,siteTitle:siteTitle })
-  }  
-mach = (p) => {
-   this.setState({posts:p})
-  
-}
+
 zeig = (e) => {
   e.preventDefault()
-
-  this.setState({apost:this.props.data.allMarkdownRemark.edges,posts:this.props.data.allMarkdownRemark.edges})
-  let wert = e.target.value
-  if(wert==="alle"){
-    return
-  }
-  let p = this.props.data.allMarkdownRemark.edges.filter(item => item && item.node.frontmatter.kategorie===wert)
-  
-  this.mach(p) 
-  
+  this.setState({kategorie:e.target.value})
   }
   
 
   render() {
-   //const { data } = this.props
-   //
-   //const posts = data.allMarkdownRemark.edges
-    
-   
-    return  (
+  const { data } = this.props
+  const posts = data.allMarkdownRemark.edges
+     return  (
       <Layout location={this.props.location} title={this.state.siteTitle? this.state.siteTitle:null}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
+          keywords={[`Künstler vom Mittelrhein`, `Künstlerverzeichnis Mittelrhein`, `Kunst vom Mittelrhein`]}
         />
         <div>
   <select onChange={this.zeig}>
@@ -64,32 +43,32 @@ zeig = (e) => {
     </select>
     </div>
         <Blogdiv>
-        
-        {this.state.posts.map(({ node }) => {
-          //const artist = node.frontmatter.artist || node.fields.slug
+        {posts.map(({ node }) => {
+          if(this.state.kategorie==="0" || this.state.kategorie==="alle"){
           return (
-            
-            
              <MeinBild key={node.fields.slug}>
               <figure>
               <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                 
-                <img src={node.frontmatter.bild} alt="" /> 
+                  <img src={node.frontmatter.bild} alt={node.frontmatter.artist} />
               </Link>
-          <figcaption>{node.frontmatter.artist}</figcaption>
-</figure>
-             
-          
-            
-             
-            
-             
-              
-             
-              </MeinBild>
-           
-           
-          )
+              <figcaption>{node.frontmatter.artist}</figcaption>
+             </figure>
+            </MeinBild>
+           )
+          }
+         else if(this.state.kategorie===node.frontmatter.kategorie){
+            return(
+              <MeinBild key={node.fields.slug}>
+              <figure>
+              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                  <img src={node.frontmatter.bild} alt="" />
+              </Link>
+              <figcaption>{node.frontmatter.artist}</figcaption>
+             </figure>
+            </MeinBild>
+            )
+         }
+       return ""
         })}
         </Blogdiv>
       </Layout>
