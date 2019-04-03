@@ -183,7 +183,7 @@ export const Footer = styled.div`
      
   }
 
-  @media (max-width:699px){
+  @media (max-width:834px){
     flex-direction:column; 
     justify-content:center;
     alignItems:center; 
