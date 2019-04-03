@@ -301,7 +301,7 @@ export const Blogdiv = styled.div`
 }
 
 @media only screen and (orientation:landscape) {
-    margin-top:120px;
+    margin-top:140px;
 }  
 
 `
