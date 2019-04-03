@@ -117,7 +117,7 @@ export const Logo = styled.div`
     width:200px;
   }
   
-  @media (max-width:700px){
+  @media (max-width:835px){
       display:none;
   }
 `
@@ -208,7 +208,7 @@ export const Footer = styled.div`
       
    }
 }
-@media (min-width:700px) {
+@media (min-width:834px) {
     ul {
         display:flex;
         align-items:space-around;
@@ -279,7 +279,7 @@ export const Blogdiv = styled.div`
   display:flex;
   justify-content:flex-start;
   align-items:flex-start;
-  margin-top:60px;
+  margin-top:80px;
   flex-wrap:wrap;
   height:100%;
   width:100%;
@@ -299,6 +299,7 @@ export const Blogdiv = styled.div`
     margin-bottom:30px;
    
 }
+
 @media only screen and (orientation:landscape) {
     margin-top:120px;
 }  
