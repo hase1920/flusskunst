@@ -74,8 +74,7 @@ zeig = (e) => {
               <figure>
               <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                  
-                <img src={node.frontmatter.bild}
-                 alt="" /> 
+                <img src={node.frontmatter.bild} alt="" /> 
               </Link>
           <figcaption>{node.frontmatter.artist}</figcaption>
 </figure>
