@@ -3,7 +3,7 @@ artist: Künstler unbekannt
 date: "2015-05-01T22:12:03.284Z"
 kategorie: Gesang
 description: Gesangstruppe
-bild: kuenstler-16.jpg
+bild: ./kuenstler-16.jpg
 ort: Lorch
 strasse: Hauptstr. 1
 webseite: http://www.webseite.de
