@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
       }
         
         
-        <img src={${post.frontmatter.bild}} alt=""/>
+        <img src={post.frontmatter.bild} alt=""/>
         <p
           style={{
             ...scale(-1 / 5),
