@@ -24,7 +24,7 @@ zeig = (e) => {
   const { data } = this.props
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-     return  (
+      return posts ?  (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
@@ -73,7 +73,7 @@ zeig = (e) => {
         })}
         </Blogdiv>
       </Layout>
-    )
+    ):null
   }
 }
 
