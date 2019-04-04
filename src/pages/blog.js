@@ -48,24 +48,24 @@ zeig = (e) => {
           if(this.state.kategorie==="0" || this.state.kategorie==="alle"){
           return (
              <MeinBild key={node.fields.slug}>
+             <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
               <figure>
-              <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   <img src={node.frontmatter.bild} alt={node.frontmatter.artist} />
-              </Link>
-              <figcaption>{node.frontmatter.artist}</figcaption>
-             </figure>
+                  <figcaption>{node.frontmatter.artist}</figcaption>
+              </figure>
+            </Link>
             </MeinBild>
            )
           }
          else if(this.state.kategorie===node.frontmatter.kategorie){
             return(
               <MeinBild key={node.fields.slug}>
-              <figure>
               <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+              <figure>
                   <img src={node.frontmatter.bild} alt="" />
-              </Link>
               <figcaption>{node.frontmatter.artist}</figcaption>
              </figure>
+              </Link>
             </MeinBild>
             )
          }
