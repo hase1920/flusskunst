@@ -310,33 +310,29 @@ export const Blogdiv2 = styled.div`
   display:flex;
   margin-top:60px;
   flex-direction:column;
-  animation: ${faden} .3s linear; 
   justify-content:flex-start;
   align-items:flex-start;
-  padding:30px 0;
+  padding:1% 0;
   h1 {
       font-size:1.4rem;
   }
   
- img {
-    margin-top:10px;
+ p {
+    width:600px;
+}
    
     h1 {
         font-size:1.2rem;
     }
     @media (max-width: 699px){
         p {
-            width:90%;
+            width:100%;
         }
       img {
           width:100%;
       }
     }   
-    @media (min-width: 700px){
-        p {
-            width:100%;
-        }
-    }
+    
     
     
 } 
