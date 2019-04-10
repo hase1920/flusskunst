@@ -1,20 +1,11 @@
 import React from 'react'
 import {graphql,Link} from 'gatsby'
-import { rhythm } from "../utils/typography"
+import Layout from '../components/layout'
 const Hilfe = (props) => {
     const title = props.data.site.siteMetadata.title
    return (
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-       }}
-    >   
-    
       
-    <h1 style={{fontSize:'2rem'}}><Link to="/"> &larr; {title}</Link></h1>    
+  <Layout location={props.location} title={title}> 
   <h2>Text und Photo per Email senden an:</h2>
   René Broich <br/>
   Langstr. 48 <br/>
@@ -32,7 +23,7 @@ const Hilfe = (props) => {
       <h2>Beispieldatei</h2>
       <img src="/fotoanleitung.jpg" alt="anleitung" />
   </p>
-   </div>
+   </Layout>
   
   )}
   export default Hilfe
