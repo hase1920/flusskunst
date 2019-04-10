@@ -24,7 +24,6 @@ export const raumQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
   }`
