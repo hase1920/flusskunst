@@ -1,7 +1,7 @@
 import React from 'react'
 import { rhythm} from "../utils/typography"
 import {Link,graphql} from 'gatsby'
-import Layout from '../components/layout
+import Layout from '../components/layout'
 
 const Datenschutz = (props) => {
   const title=props.data.site.siteMetadata.title
