@@ -135,7 +135,6 @@ export const schutzQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
   }`
