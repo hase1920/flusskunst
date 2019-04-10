@@ -2,12 +2,12 @@ import React from 'react'
 import Layout from '../components/layout'
 import {Mitmacher,Mit} from '../components/format'
 import {Link,graphql} from 'gatsby'
+import Layout from '../components/layout
 
 const Mitmachen =  (props) =>{
     const title = props.data.site.siteMetadata.title
     return (
-<Layout location={props.location.pathname}>
-<h1 style={{fontSize:'2.rem'}}><Link to="/"> &larr; {title}</Link></h1>
+<Layout location={props.location.pathname} title={title}>
 <h2>Mitmachen</h2>
 
 <Mit> 
