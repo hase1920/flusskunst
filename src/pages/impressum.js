@@ -25,7 +25,6 @@ export const impressumQuery = graphql`
     site {
       siteMetadata {
         title
-        author
-      }
+       }
     }
   }`
