@@ -6,6 +6,19 @@ import {isLoggedIn,handleLogin, getUser} from './services/auth'
 
 
 class Layout extends React.Component {
+  state = {
+    zugestimmt:false
+    
+  }
+  accept = (e) => {
+    e.preventDefault()
+    this.setState({zugestimmt:true})
+    let x = isLoggedIn()
+    if(!x) {
+       handleLogin({username:"john", password:"pass"})
+    }
+  }
+  
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
