@@ -27,7 +27,6 @@ export const kontaktQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
   }`
