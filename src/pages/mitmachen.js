@@ -9,11 +9,7 @@ const Mitmachen =  (props) =>{
     return (
 <Layout location={props.location.pathname} title={title}>
 <h2>Mitmachen</h2>
-
 <Mit> 
-
-
- 
  <Mitmacher>
  
  <li style={{borderTop:'1px grey solid',borderBottom:'1px grey solid',display:'block',fontSize:'1.3rem',fontWeight:'400'}}>&rarr; Künstler</li>
