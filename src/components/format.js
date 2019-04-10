@@ -9,6 +9,18 @@ const faden = keyframes`
     opacity: 1;
   }
 `;
+const fly = keyframes`
+from {
+ 
+  opacity:0;
+  
+
+to {
+    opacity:1;
+ 
+   
+}
+`;
 
 export const Mitmacher = styled.div`
 display:flex;
@@ -340,6 +352,30 @@ export const Blogdiv2 = styled.div`
     margin-top:120px;
 }     
 
+`
+export const DatenDec = styled.div`
+ width:100vw;
+ height:100px;
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-end;
+ align-items:center;
+ p {color:white;}
+ background:skyblue; 
+ animation: ${fly} 2s linear;
+ @media (min-width:1000px) {
+     width:60%;
+ }
+ button {
+     border:none;
+     background:skyblue;
+     color:white;
+     text-decoration:underline;
+     cursor:pointer;
+     font-size:1.2rem;
+     
+ }
+ margin-bottom:100px;
 `
 
 
