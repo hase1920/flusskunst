@@ -8,9 +8,6 @@ const Impressum = (props) => {
  return (
   <Layout location={props.location} title={title}>
 
-  
-    
-  <h1 style={{fontSize:'2rem'}}><Link to="/"> &larr; {title}</Link></h1>    
 <h2>Impressum</h2>
 René Broich <br/>
 Langstr. 48 <br/>
