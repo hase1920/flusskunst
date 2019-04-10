@@ -1,7 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
-import {Footer,Header2,Logo,Mach,Boxi} from './format'
+import {DatenDec,Footer,Header2,Logo,Mach,Boxi} from './format'
 import { rhythm } from "../utils/typography"
+import {isLoggedIn,handleLogin, getUser} from './services/auth'
+
 
 class Layout extends React.Component {
   render() {
@@ -59,7 +61,20 @@ class Layout extends React.Component {
         <header>{header}</header>
         <main>{children}</main>
        
-        <Footer>
+       <Footer>
+
+          {
+           u.username!=="john"  ?
+          <DatenDec>
+            <p>Auch wir Nutzen Cookies und andere Tools zur
+              Optimierung unserer Webseite.
+            </p>
+            <li><button onClick={this.accept}>ich stimme zu</button>
+            {``} <Link style={{color:'white'}} to="/datenschutz">Datenschutzbestimmungen lesen</Link>
+         </li>
+             
+          </DatenDec>
+         :
          <ul>
            <li><Link to="/">Home</Link></li>
            <li><Link to="/kontakt">Kontakt</Link></li>
@@ -67,11 +82,12 @@ class Layout extends React.Component {
            <li><Link to="/datenschutz">Datenschutz</Link></li>
            <li><Link to="/hilfe">Anleitung für die Selbstdarstellung</Link></li>
           </ul> 
-      
+          }
       <img src="/z.svg" alt="Logo Zweckverband" />
-          
+         
          
           </Footer>
+        
                  
           <Logo>
           <a target="_blank" rel="noopener noreferrer" href="http://www.zv-welterbe.de/"> <img src="/z.svg" alt="Logo Zweckverband" /></a>
