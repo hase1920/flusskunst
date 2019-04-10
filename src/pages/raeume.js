@@ -4,9 +4,9 @@ import { graphql } from 'gatsby'
 class Raum extends React.Component {
 
     render(){
-      const title = props.data.site.siteMetadata.title
+      const title = this.props.data.site.siteMetadata.title
         return(
-            <Layout location={props.location} title={title}>
+            <Layout location={this.props.location} title={title}>
          
             <h1> Hier stehen Raumnachfragen oder -Angebote</h1>
             <a href="/Rhein-Kultur_Layout_Raeume.pdf"> -
