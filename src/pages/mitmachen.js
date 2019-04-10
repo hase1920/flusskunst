@@ -46,7 +46,6 @@ export const mitQuery = graphql`
     site {
       siteMetadata {
         title
-        author
-      }
+       }
     }
   }`
