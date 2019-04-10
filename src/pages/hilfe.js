@@ -33,7 +33,6 @@ const Hilfe = (props) => {
       site {
         siteMetadata {
           title
-          author
-        }
+         }
       }
     }`
