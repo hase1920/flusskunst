@@ -1,23 +1,12 @@
 import React from 'react'
 import { rhythm } from "../utils/typography"
 import {Link,graphql} from 'gatsby'
-
+import Layout from '../components/layout
 
 const Kontakt = (props) =>{
  const title= props.data.site.siteMetadata.title
  return(
-    <div
-    style={{
-      marginLeft: `auto`,
-      marginRight: `auto`,
-      maxWidth: rhythm(24),
-      padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      
-    }}
-  >  
- 
- 
- <h1 style={{fontSize:"2rem"}}><Link to="/"> &larr; {title}</Link></h1>  
+ <Layout location={props.location} title={title}>
 
 <h2>Kontakt</h2>
 <p>Hier werden die Kontaktdaten der Bürgermeister und
@@ -28,7 +17,7 @@ René Broich <br />
 Langstr. 48<br />
 55422 Bacharach<br />
 
- </div>
+ </Layout>
 )}
 export default Kontakt
 
