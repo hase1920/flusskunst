@@ -1,22 +1,13 @@
 import React from 'react'
 import { rhythm} from "../utils/typography"
 import {Link,graphql} from 'gatsby'
-
+import Layout from '../components/layout
 
 const Datenschutz = (props) => {
   const title=props.data.site.siteMetadata.title
  return (
-    <div
-    style={{
-      marginLeft: `auto`,
-      marginRight: `auto`,
-      maxWidth: rhythm(24),
-      padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-    
-    }}
-  > 
- 
-<h1 style={{fontSize:'2rem'}}><Link to="/"> &larr; {title} </Link></h1> 
+    <Layout location={props.location} title={title}>
+
 <h2>Hinweis zum Datenschutz</h2>
 <p>Die unten stehenden Angaben sind nur vorbereitender Natur. Das heißt:
   Im Moment sind noch keine Tools installiert, die Tracking- und andere Informationen
@@ -135,7 +126,7 @@ Hierzu können z.B. Inhalte wie Bilder, Videos oder Texte und Schaltflächen geh
   Links und für alle Inhalte der Seiten, zu denen die bei uns 
   angemeldeten Banner und Links führen.</p>
 
- </div>
+ </Layout>
 )}
 export default Datenschutz
 
