@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import {Mitmacher,Mit} from '../components/format'
 import {Link,graphql} from 'gatsby'
-import Layout from '../components/layout'
+
 
 const Mitmachen =  (props) =>{
     const title = props.data.site.siteMetadata.title
