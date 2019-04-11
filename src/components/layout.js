@@ -85,7 +85,7 @@ class Layout extends React.Component {
               Optimierung unserer Webseite.
             </p>
             <li><button onClick={this.accept}>ich stimme zu</button>
-            {``} <Link style={{color:'white'}} to="/datenschutz">Datenschutzbestimmungen lesen</Link>
+            {``} <Link style={{color:'white'}} to="/datenschutz"> &rarr; Datenschutzbestimmungen lesen</Link>
          </li>
              
           </DatenDec>
