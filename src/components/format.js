@@ -360,7 +360,7 @@ export const DatenDec = styled.div`
  flex-direction:column;
  justify-content:flex-end;
  align-items:center;
- p {color:white;}
+ p {color:black;}
  background:skyblue; 
  animation: ${fly} 2s linear;
  @media (min-width:1000px) {
@@ -369,30 +369,18 @@ export const DatenDec = styled.div`
  button {
      border:none;
      background:skyblue;
-     color:white;
+     color:black;
      text-decoration:underline;
      cursor:pointer;
-     font-size:1.2rem;
+     
      
  }
+ a,li,p{padding:5px;margin:0;}
+ a{color:black;}
  margin-bottom:100px;
 `
 
 
-const rotate = keyframes`
-  from {
-    transform: width:60px;
-  }
 
-  to {
-    transform: width:30%;
-  }
-`;
 
-// Here we create a component that will rotate everything we pass in over two seconds
-export const Rotate = styled.div`
-  display: inline-block;
-  animation: ${rotate} 9s linear infinite;
-  padding: 2rem 1rem;
-  font-size: 1.2rem;
-`;
+
