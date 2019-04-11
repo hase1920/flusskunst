@@ -1,6 +1,5 @@
 import React from 'react'
-import { rhythm} from "../utils/typography"
-import {Link,graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 
 const Datenschutz = (props) => {
