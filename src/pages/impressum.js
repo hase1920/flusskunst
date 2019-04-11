@@ -1,5 +1,4 @@
 import React from 'react'
-import { rhythm } from "../utils/typography"
 import {Link,graphql} from 'gatsby'
 import Layout from '../components/layout'
 
