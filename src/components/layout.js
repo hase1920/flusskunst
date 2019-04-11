@@ -81,10 +81,10 @@ class Layout extends React.Component {
           {
            u.username!=="john"  ?
           <DatenDec>
-            <p>Auch wir Nutzen Cookies und andere Tools zur
+            <p>Auch wir nutzen Cookies und andere Tools zur
               Optimierung unserer Webseite.
             </p>
-            <li><button onClick={this.accept}>ich stimme zu</button>
+            <li><button onClick={this.accept}>Ich stimme zu.</button>
             {``} <Link style={{color:'white'}} to="/datenschutz"> &rarr; Datenschutzbestimmungen lesen</Link>
          </li>
              
