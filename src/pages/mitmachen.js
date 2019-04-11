@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {Mitmacher,Mit} from '../components/format'
-import {Link,graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 
 const Mitmachen =  (props) =>{
