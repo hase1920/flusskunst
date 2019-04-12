@@ -1,13 +1,13 @@
 import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '../components/layout'
-import {Blogdiv} from '../components/format'
+import {Blogdiv2} from '../components/format'
 
 const Datenschutz = (props) => {
   const title=props.data.site.siteMetadata.title
  return (
     <Layout location={props.location} title={title}>
-    <Blogdiv>
+    <Blogdiv2>
 <h2>Hinweis zum Datenschutz</h2>
 <p>Die unten stehenden Angaben sind nur vorbereitender Natur. Das heißt:
   Im Moment sind noch keine Tools installiert, die Tracking- und andere Informationen
@@ -125,7 +125,7 @@ Hierzu können z.B. Inhalte wie Bilder, Videos oder Texte und Schaltflächen geh
 <p>Diese Erklärung gilt für alle auf unserer Website angezeigten 
   Links und für alle Inhalte der Seiten, zu denen die bei uns 
   angemeldeten Banner und Links führen.</p>
-</Blogdiv>
+</Blogdiv2>
  </Layout>
 )}
 export default Datenschutz
