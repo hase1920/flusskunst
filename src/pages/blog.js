@@ -5,7 +5,7 @@ import { Link, graphql,navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Blogdiv,MeinBild} from '../components/format'
-import {isLoggedIn} from '../components/services/auth'
+import {isLoggedIn,isBrowser} from '../components/services/auth'
 
 class BlogIndex extends React.Component {
   state = {
@@ -17,10 +17,13 @@ class BlogIndex extends React.Component {
   }
 
 componentWillMount(){
-  let u = isLoggedIn();
-  
-  if(u) {
-    this.setState({loggedin:true})
+  let b = isBrowser();
+  if(b){
+    let u = isLoggedIn();
+    console.log(u)
+    if(u) {
+      this.setState({loggedin:true})
+    }
   }
 }  
 zeig = (e) => {
