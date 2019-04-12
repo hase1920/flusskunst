@@ -5,7 +5,7 @@ import { Link, graphql,navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Blogdiv,MeinBild} from '../components/format'
-import {getUser} from '../components/services/auth'
+import {isLoggedIn} from '../components/services/auth'
 
 class BlogIndex extends React.Component {
   state = {
@@ -25,8 +25,8 @@ zeig = (e) => {
   const { data } = this.props
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  const u=getUser()
-      return u && u.username==="john" ?  (
+  const u=isLoggedIn()
+      return u ? (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
