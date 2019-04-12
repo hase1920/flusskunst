@@ -1,10 +1,11 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { Link, graphql,navigate } from "gatsby"
 
 //import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Blogdiv,MeinBild} from '../components/format'
+import {getUser} from '../components/services/auth'
 
 class BlogIndex extends React.Component {
   state = {
@@ -24,7 +25,8 @@ zeig = (e) => {
   const { data } = this.props
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-      return posts ?  (
+  const u=getUser()
+      return u && u.username==="john" ?  (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
@@ -66,14 +68,13 @@ zeig = (e) => {
               <figcaption>{node.frontmatter.artist}</figcaption>
              </figure>
               </Link>
-            </MeinBild>
-            )
-         }
-       return ""
-        })}
+            </MeinBild>)
+}
+return ""
+})}
         </Blogdiv>
       </Layout>
-    ):null
+    ):<p>{navigate("/")}</p>
   }
 }
 
