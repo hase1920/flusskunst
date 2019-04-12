@@ -12,9 +12,17 @@ class BlogIndex extends React.Component {
    posts:[],
    aposts:[],
    kategorie:"0", 
-   lang:0
+   lang:0,
+    loggedin:false
   }
 
+componentWillMount(){
+  let u = isLoggedIn();
+  
+  if(u) {
+    this.setState({loggedin:true})
+  }
+}  
 zeig = (e) => {
   e.preventDefault()
   this.setState({kategorie:e.target.value})
@@ -25,8 +33,8 @@ zeig = (e) => {
   const { data } = this.props
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
-  const u=isLoggedIn()
-      return u ? (
+  
+      return this.state.loggedin ?  (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
