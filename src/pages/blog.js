@@ -5,7 +5,7 @@ import { Link, graphql,navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Blogdiv,MeinBild} from '../components/format'
-import { isBrowser, isLoggedIn } from "../components/services/auth"
+
 
 
 class BlogIndex extends React.Component {
@@ -29,7 +29,7 @@ zeig = (e) => {
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   
-      return isBrowser() && isLoggedIn() ?  (
+      return posts ?  (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
