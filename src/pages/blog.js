@@ -5,7 +5,6 @@ import { Link, graphql,navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Blogdiv,MeinBild} from '../components/format'
-import {isLoggedIn,isBrowser} from '../components/services/auth'
 
 class BlogIndex extends React.Component {
   state = {
@@ -13,19 +12,10 @@ class BlogIndex extends React.Component {
    aposts:[],
    kategorie:"0", 
    lang:0,
-    loggedin:false
+    
   }
 
-componentWillMount(){
-  let b = isBrowser();
-  if(b){
-    let u = isLoggedIn();
-    console.log(u)
-    if(u) {
-      this.setState({loggedin:true})
-    }
-  }
-}  
+
 zeig = (e) => {
   e.preventDefault()
   this.setState({kategorie:e.target.value})
@@ -37,7 +27,7 @@ zeig = (e) => {
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
   
-      return this.state.loggedin ?  (
+      return posts ?  (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Künstler und Künstlerinnen vom Weltkulturerbe Oberes Mittelrheintal"
