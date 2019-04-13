@@ -5,6 +5,7 @@ import { Link, graphql,navigate } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import {Blogdiv,MeinBild} from '../components/format'
+import { isBrowser,getUser } from "../components/services/auth";
 
 
 
@@ -28,6 +29,14 @@ zeig = (e) => {
   const { data } = this.props
    const siteTitle = data.site.siteMetadata.title
   const posts = data.allMarkdownRemark.edges
+  let w = isBrowser()
+    if(w){
+      let u = getUser()
+      if(u.username!=="john")  {
+        navigate("/")
+        return null
+      }
+    }
   
       return posts ?  (
       <Layout location={this.props.location} title={siteTitle}>
