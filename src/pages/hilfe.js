@@ -11,7 +11,7 @@ const Hilfe = (props) => {
   <h2>Text und Photo per Email senden an:</h2>
   René Broich <br/>
   Langstr. 48 <br/>
-  Email: renbroi@icloud.components <br/>
+  Email: renbroi@icloud.com<br/>
   <br/><br></br>
   <p><strong>72 Sekunden Video ...</strong></p>
   <p>So erstellst Du Deinen Text ...</p>
