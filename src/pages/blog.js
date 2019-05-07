@@ -55,7 +55,6 @@ zeig = (e) => {
     <option value="Literatur">Literatur</option>
     <option value="Photografie">Photografie</option>
     <option value="Design">Design</option>
-    <option value="Kunstausstellungen">Kunstausstellungen</option>    
     </select>
     </div>
         <Blogdiv>
